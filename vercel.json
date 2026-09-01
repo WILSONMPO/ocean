@@ -1,4 +1,5 @@
 {
+  "name": "ocean-city-community-marathon",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "framework": "vite",
