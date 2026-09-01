@@ -1,4 +1,3 @@
-import { Link } from "react-router";
 import PageHero from "../components/PageHero";
 import FadeUp from "../components/FadeUp";
 
@@ -7,121 +6,120 @@ export default function SportsTourism() {
     <>
       <PageHero
         section="Sports Tourism"
-        title="SPORTS ×<br />TOURISM ×<br /><span style='color:var(--color-aqua)'>TANZANIA.</span>"
-        subtitle="Ocean City Marathon is a flagship platform for Tanzania's sports tourism ambitions."
-        img="https://images.unsplash.com/photo-1607949666679-73bbe2fb26a4?w=1600&h=900&fit=crop&auto=format"
-        imgAlt="Tanzania beach"
-        cta={{ label: "REGISTER TO RUN", to: "/registration" }}
+        title="DISCOVER<br />TANZANIA BY<br /><span className='text-cyan-300'>THE OCEAN.</span>"
+        subtitle="Combine your marathon experience with East Africa's most breathtaking coastal landscape."
+        img="https://images.unsplash.com/photo-1474524955719-b9f87c50ce47?w=1600&h=900&fit=crop&auto=format"
+        imgAlt="Dar es Salaam ocean coastline"
       />
 
-      {/* Run by the ocean */}
-      <section className="py-24 lg:py-36 bg-[var(--color-ocean-950)]">
+      <section className="py-24 lg:py-36 bg-white text-slate-900">
         <div className="max-w-screen-xl mx-auto px-6 lg:px-10">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <FadeUp>
-              <h2 className="font-display text-white leading-none mb-8" style={{ fontWeight: 900, fontSize: "clamp(40px, 5.5vw, 80px)" }}>
-                RUN BY<br />THE OCEAN.
+              <h2 className="font-display text-slate-900 leading-none mb-8 font-black" style={{ fontSize: "clamp(40px, 5.5vw, 80px)" }}>
+                DAR ES SALAAM:<br /><span className="text-sky-600">THE COASTAL CITY</span>
               </h2>
-              <p className="font-body text-white/55 text-base lg:text-xl leading-relaxed mb-6" style={{ fontWeight: 300 }}>
-                Dar es Salaam is one of Africa's most vibrant coastal cities — and Coco Beach offers one of the continent's most breathtaking marathon routes. The Indian Ocean stretches to the horizon as runners push through every kilometre.
+              <p className="font-body text-slate-700 text-base lg:text-xl leading-relaxed mb-5 font-normal">
+                Dar es Salaam — the haven of peace — is Tanzania's vibrant coastal metropolis, where warm Indian Ocean waters meet rich culture, dynamic hospitality, and unforgettable sunsets.
               </p>
-              <p className="font-body text-white/55 text-base lg:text-lg leading-relaxed mb-6" style={{ fontWeight: 300 }}>
-                Ocean City Marathon is more than a race. It is a destination experience — combining world-class sport with the extraordinary natural beauty, culture, and warmth of Tanzania.
+              <p className="font-body text-slate-600 text-base lg:text-lg leading-relaxed mb-5 font-light">
+                The Ocean City Community Marathon offers runners and visitors a unique opportunity to race along the iconic Coco Beach shoreline, experiencing the energy, warmth, and natural beauty of Dar es Salaam.
               </p>
-              <p className="font-body text-white/55 text-base lg:text-lg leading-relaxed" style={{ fontWeight: 300 }}>
-                We are committed to promoting Tanzania's natural and cultural resources, marine tourism, and ocean conservation through the power of sport.
+              <p className="font-body text-slate-600 text-base lg:text-lg leading-relaxed font-light">
+                From post-race ocean dips to coastal dining, cultural landmarks, and island excursions to Bongoyo and Mbudya, Ocean City is an unforgettable sports tourism destination.
               </p>
             </FadeUp>
 
             <FadeUp delay={150}>
-              <div className="grid grid-cols-2 gap-3">
-                <div className="col-span-2 aspect-video overflow-hidden bg-[var(--color-ocean-900)]">
-                  <img src="https://images.unsplash.com/photo-1474524955719-b9f87c50ce47?w=900&h=500&fit=crop&auto=format" alt="Golden hour ocean" className="w-full h-full object-cover opacity-80 hover:scale-105 transition-transform duration-700" />
-                </div>
-                <div className="aspect-square overflow-hidden bg-[var(--color-ocean-900)]">
-                  <img src="https://images.unsplash.com/photo-1625151012343-00d17ffb40dd?w=400&h=400&fit=crop&auto=format" alt="Tanzania coast" className="w-full h-full object-cover opacity-75 hover:scale-105 transition-transform duration-700" />
-                </div>
-                <div className="aspect-square overflow-hidden bg-[var(--color-ocean-900)]">
-                  <img src="https://images.unsplash.com/photo-1607949666679-73bbe2fb26a4?w=400&h=400&fit=crop&auto=format" alt="East Africa beach" className="w-full h-full object-cover opacity-75 hover:scale-105 transition-transform duration-700" />
-                </div>
+              <div className="grid grid-cols-2 gap-4">
+                {[
+                  { num: "Coco Beach", label: "Race Hub Location" },
+                  { num: "Indian Ocean", label: "Coastal Race Route" },
+                  { num: "Bahari Tour", label: "Elite Experience" },
+                  { num: "Dar es Salaam", label: "Host Destination" },
+                ].map(({ num, label }) => (
+                  <div key={label} className="border-2 border-sky-200 bg-sky-50/60 rounded-2xl p-6 shadow-sm hover:border-sky-400 transition-colors">
+                    <div className="font-display text-sky-600 text-2xl lg:text-3xl mb-2 font-black uppercase">{num}</div>
+                    <div className="font-wide text-slate-700 text-[10px] tracking-[0.2em] uppercase font-extrabold">{label}</div>
+                  </div>
+                ))}
               </div>
             </FadeUp>
           </div>
         </div>
       </section>
 
-      {/* Bahari Tour */}
-      <section className="py-24 lg:py-36 bg-[var(--color-ocean-900)] relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5"
-          style={{ backgroundImage: "radial-gradient(circle at 70% 50%, var(--color-aqua) 0%, transparent 60%)" }} />
-        <div className="max-w-screen-xl mx-auto px-6 lg:px-10 relative z-10">
+      {/* Bahari Tour Announcement */}
+      <section className="py-20 lg:py-28 bg-gradient-to-r from-sky-600 via-cyan-600 to-sky-700 text-white relative overflow-hidden shadow-inner">
+        <div className="max-w-screen-xl mx-auto px-6 lg:px-10 text-center relative z-10">
           <FadeUp>
-            <div className="max-w-3xl">
-              <div className="flex items-center gap-4 mb-8">
-                <div className="w-10 h-[1px] bg-[var(--color-aqua)]" />
-                <span className="font-wide text-[10px] text-[var(--color-aqua)] tracking-[0.35em] uppercase">Exclusive Programme</span>
-              </div>
-              <h2 className="font-display text-white leading-none mb-8" style={{ fontWeight: 900, fontSize: "clamp(52px, 8vw, 112px)" }}>
-                BAHARI<br />TOUR
-              </h2>
-              <p className="font-body text-white/55 text-base lg:text-xl leading-relaxed mb-6" style={{ fontWeight: 300 }}>
-                For international elite runners, the Ocean City Marathon introduces <strong className="text-white font-normal">Bahari Tour</strong> — a curated, exclusive journey through Tanzania's most extraordinary ocean and cultural landscapes.
-              </p>
-              <p className="font-body text-white/55 text-base lg:text-lg leading-relaxed mb-10" style={{ fontWeight: 300 }}>
-                More than a race package, Bahari Tour positions Tanzania as a world-class destination for sports tourism — combining athletic excellence with immersive cultural and natural experiences. Details to be announced.
-              </p>
-              <div className="inline-flex items-center gap-3 px-6 py-3 border border-white/10">
-                <div className="w-2 h-2 rounded-full bg-[var(--color-aqua)] animate-pulse" />
-                <span className="font-wide text-white/45 text-[11px] tracking-[0.25em] uppercase">Bahari Tour Details — Coming Soon</span>
-              </div>
-            </div>
+            <div className="font-wide text-[11px] text-cyan-100 tracking-[0.35em] uppercase mb-6 font-bold bg-sky-900/40 px-4 py-1.5 rounded-full w-fit mx-auto border border-cyan-200/30">EXCLUSIVE EXPERIENCE</div>
+            <h2 className="font-display text-white leading-none font-black drop-shadow-md" style={{ fontSize: "clamp(32px, 5vw, 72px)" }}>
+              BAHARI TOUR — AN ELITE EXPERIENCE FOR INTERNATIONAL RUNNERS
+            </h2>
+            <p className="font-body text-cyan-100 text-base lg:text-xl leading-relaxed max-w-2xl mx-auto mt-6 font-normal">
+              Full details of the exclusive Bahari Tour experience for international runners will be announced shortly.
+            </p>
           </FadeUp>
         </div>
       </section>
 
-      {/* Why Dar */}
-      <section className="py-20 lg:py-28 bg-[var(--color-ocean-950)]">
+      {/* Highlights */}
+      <section className="py-24 lg:py-32 bg-gradient-to-b from-sky-50/60 to-white border-t border-sky-200">
         <div className="max-w-screen-xl mx-auto px-6 lg:px-10">
           <FadeUp>
-            <h2 className="font-display text-white leading-none mb-12" style={{ fontWeight: 900, fontSize: "clamp(36px, 5vw, 68px)" }}>
-              WHY DAR ES SALAAM?
+            <h2 className="font-display text-slate-900 leading-none mb-12 font-black" style={{ fontSize: "clamp(36px, 5vw, 68px)" }}>
+              HIGHLIGHTS OF <span className="text-sky-600">DAR ES SALAAM</span>
             </h2>
           </FadeUp>
-          <div className="grid lg:grid-cols-4 gap-5">
+
+          <div className="grid lg:grid-cols-3 gap-8">
             {[
-              { title: "THE OCEAN", desc: "Run alongside the Indian Ocean on one of East Africa's most beautiful coastal routes." },
-              { title: "THE CITY", desc: "Tanzania's commercial heart — vibrant, energetic, and growing on the world stage." },
-              { title: "THE CULTURE", desc: "Rich Swahili heritage, warm community spirit, and a city alive with music, food, and art." },
-              { title: "THE CLIMATE", desc: "November's coastal climate creates ideal conditions for marathon running and outdoor experience." },
-            ].map(({ title, desc }, i) => (
+              {
+                title: "COCO BEACH SHORELINE",
+                desc: "The heartbeat of the race. Run with sea breezes and ocean views stretching to the horizon.",
+                img: "https://images.unsplash.com/photo-1773864051846-a26915bb3019?w=600&h=400&fit=crop&auto=format",
+              },
+              {
+                title: "ISLAND EXCURSIONS",
+                desc: "Explore nearby marine reserves — Bongoyo and Mbudya Islands — just a short boat trip from the mainland.",
+                img: "https://images.unsplash.com/photo-1439405326854-014607f694d7?w=600&h=400&fit=crop&auto=format",
+              },
+              {
+                title: "SWAHILI HOSPITALITY",
+                desc: "Experience the legendary warmth, cuisine, and vibrant energy of Tanzanian culture.",
+                img: "https://images.unsplash.com/photo-1474524955719-b9f87c50ce47?w=600&h=400&fit=crop&auto=format",
+              },
+            ].map(({ title, desc, img }, i) => (
               <FadeUp key={title} delay={i * 80}>
-                <div className="border-t-2 border-[var(--color-aqua)]/30 pt-6">
-                  <div className="font-display text-white text-xl lg:text-2xl tracking-[0.05em] uppercase mb-3" style={{ fontWeight: 800 }}>{title}</div>
-                  <p className="font-body text-white/45 text-sm leading-relaxed" style={{ fontWeight: 300 }}>{desc}</p>
+                <div className="bg-white rounded-2xl border-2 border-sky-200 overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                  <div className="aspect-video overflow-hidden bg-sky-100">
+                    <img src={img} alt={title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                  </div>
+                  <div className="p-6">
+                    <div className="font-display text-slate-900 text-xl lg:text-2xl tracking-[0.05em] uppercase mb-3 font-extrabold">{title}</div>
+                    <p className="font-body text-slate-600 text-sm leading-relaxed font-light">{desc}</p>
+                  </div>
                 </div>
               </FadeUp>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* CTA */}
-      <section className="py-20 bg-[var(--color-ocean-900)] text-center">
-        <FadeUp>
-          <div className="max-w-screen-xl mx-auto px-6 lg:px-10">
-            <h3 className="font-display text-white text-3xl lg:text-5xl leading-none mb-4" style={{ fontWeight: 900 }}>
-              EXPERIENCE TANZANIA.<br />THROUGH RUNNING.
+          <div className="mt-16 text-center">
+            <h3 className="font-display text-slate-900 text-3xl lg:text-5xl leading-none mb-4 font-black">
+              PLAN YOUR MARATHON TRIP
             </h3>
-            <p className="font-body text-white/45 text-base mb-10 max-w-xl mx-auto" style={{ fontWeight: 300 }}>
-              Join 3,000+ runners at one of East Africa's most scenic marathon routes this November.
+            <p className="font-body text-slate-600 text-base leading-relaxed max-w-md mx-auto mb-8 font-normal">
+              Register via WhatsApp (+255 613 786 110) and connect with our team for event information.
             </p>
-            <Link to="/registration"
-              className="inline-flex font-display text-[14px] tracking-[0.15em] uppercase bg-[var(--color-ocean-400)] hover:bg-[var(--color-aqua)] text-white px-10 py-4 transition-all duration-300"
-              style={{ fontWeight: 800, clipPath: "polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%)" }}>
-              REGISTER TO RUN
-            </Link>
+            <a href="https://wa.me/255613786110?text=Hello%2C%20I%20want%20to%20register%20for%20the%20Ocean%20City%20Community%20Marathon%202026."
+              target="_blank" rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 font-display text-[15px] tracking-[0.15em] uppercase bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white px-10 py-5 transition-all duration-300 font-extrabold shadow-md rounded-lg"
+              style={{ clipPath: "polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%)" }}>
+              💬 REGISTER VIA WHATSAPP (+255 613 786 110)
+            </a>
           </div>
-        </FadeUp>
+        </div>
       </section>
     </>
   );

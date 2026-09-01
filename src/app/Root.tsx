@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 
 export default function Root() {
   return (
-    <div className="grain min-h-screen bg-[var(--color-ocean-950)]">
+    <div className="grain min-h-screen bg-white text-slate-900">
       <Nav />
       <main>
         <Outlet />
@@ -13,3 +13,4 @@ export default function Root() {
     </div>
   );
 }
+

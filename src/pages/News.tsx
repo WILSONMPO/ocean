@@ -4,13 +4,13 @@ import { Link } from "react-router";
 
 const articles = [
   {
-    tag: "ANNOUNCEMENT", date: "August 2026", featured: true,
-    title: "Ocean City Marathon 2026 Date Confirmed: 14 November",
-    excerpt: "Plus One Events Solutions confirms the third edition of the Ocean City Community Marathon will take place on 14 November 2026 at Coco Beach, Dar es Salaam. Expected participation of 3,000+ runners, families, corporates and youth groups.",
+    tag: "ANNOUNCEMENT", date: "December 2026", featured: true,
+    title: "Ocean City Marathon 2026 Date Confirmed: 12 December",
+    excerpt: "Plus One Events Solutions confirms the third edition of the Ocean City Community Marathon will take place on 12 December 2026 at Coco Beach, Dar es Salaam. Expected participation of 3,000+ runners, families, corporates and youth groups.",
     img: "https://images.unsplash.com/photo-1774050021111-8118f1e3c013?w=900&h=600&fit=crop&auto=format",
   },
   {
-    tag: "CAUSE", date: "August 2026", featured: false,
+    tag: "CAUSE", date: "December 2026", featured: false,
     title: "2026 Marathon to Fund Health Insurance for 300 Orphaned Children",
     excerpt: "This year's event carries a powerful social mission. Every step fuels our goal to provide health insurance coverage for 300 orphaned children across Tanzania.",
     img: "https://images.unsplash.com/photo-1459183885421-5cc683b8dbba?w=600&h=400&fit=crop&auto=format",
@@ -23,8 +23,8 @@ const articles = [
   },
   {
     tag: "RACE", date: "Coming Soon", featured: false,
-    title: "Race Categories and Registration Details — Coming Soon",
-    excerpt: "Official race categories for the 2026 edition will be confirmed shortly. Stay tuned for full registration details, distances, and entry fees.",
+    title: "Race Categories and Registration Details — Open via WhatsApp",
+    excerpt: "Official race categories for the 2026 edition are confirmed. Register via WhatsApp (+255 613 786 110) for 21KM, 10KM, and 5KM distances.",
     img: "https://images.unsplash.com/photo-1746046318047-4e4860c53aca?w=600&h=400&fit=crop&auto=format",
   },
   {
@@ -48,53 +48,48 @@ export default function News() {
   return (
     <>
       <PageHero
-        section="News & Announcements"
-        title="LATEST FROM<br /><span style='color:var(--color-aqua)'>OCEAN CITY.</span>"
-        subtitle="Updates, announcements, and stories from the Ocean City Community Marathon."
-        img="https://images.unsplash.com/photo-1439405326854-014607f694d7?w=1600&h=900&fit=crop&auto=format"
-        imgAlt="Ocean at golden hour"
+        section="News & Updates"
+        title="LATEST FROM<br /><span className='text-cyan-300'>OCEAN CITY.</span>"
+        subtitle="Official announcements, cause updates, athlete features, and marathon stories."
+        img="https://images.unsplash.com/photo-1774050021111-8118f1e3c013?w=1600&h=900&fit=crop&auto=format"
+        imgAlt="Marathon runners"
       />
 
-      {/* Featured */}
-      {featured && (
-        <section className="py-16 lg:py-24 bg-[var(--color-ocean-950)]">
-          <div className="max-w-screen-xl mx-auto px-6 lg:px-10">
+      <section className="py-24 lg:py-36 bg-gradient-to-b from-sky-50/60 to-white text-slate-900">
+        <div className="max-w-screen-xl mx-auto px-6 lg:px-10">
+          {featured && (
             <FadeUp>
-              <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-                <div className="overflow-hidden bg-[var(--color-ocean-900)] aspect-video lg:aspect-[3/2]">
-                  <img src={featured.img} alt={featured.title} className="w-full h-full object-cover opacity-80 hover:scale-105 transition-transform duration-700" />
-                </div>
-                <div>
-                  <div className="flex items-center gap-4 mb-5">
-                    <span className="font-wide text-[var(--color-aqua)] text-[9px] tracking-[0.35em] uppercase">{featured.tag}</span>
-                    <span className="font-wide text-white/30 text-[9px] tracking-[0.2em] uppercase">{featured.date}</span>
-                    <span className="font-wide text-[9px] tracking-[0.2em] uppercase px-3 py-1 bg-[var(--color-ocean-400)] text-white">FEATURED</span>
+              <div className="mb-16 lg:mb-24 bg-white rounded-2xl border-2 border-sky-200 overflow-hidden shadow-xl">
+                <div className="grid lg:grid-cols-12 gap-0 items-center">
+                  <div className="lg:col-span-7 aspect-video lg:aspect-[16/10] overflow-hidden bg-sky-100">
+                    <img src={featured.img} alt={featured.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
                   </div>
-                  <h2 className="font-display text-white text-2xl lg:text-4xl tracking-[0.02em] uppercase mb-5" style={{ fontWeight: 900 }}>{featured.title}</h2>
-                  <p className="font-body text-white/50 text-base leading-relaxed" style={{ fontWeight: 300 }}>{featured.excerpt}</p>
+                  <div className="lg:col-span-5 p-8 lg:p-12">
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className="font-wide text-sky-600 text-[10px] tracking-[0.3em] uppercase font-bold bg-sky-100 px-3 py-1 rounded-md">{featured.tag}</span>
+                      <span className="font-wide text-slate-500 text-[10px] tracking-[0.2em] uppercase font-semibold">{featured.date}</span>
+                    </div>
+                    <h2 className="font-display text-slate-900 text-3xl lg:text-5xl leading-tight uppercase mb-4 font-black">{featured.title}</h2>
+                    <p className="font-body text-slate-600 text-base leading-relaxed mb-6 font-normal">{featured.excerpt}</p>
+                  </div>
                 </div>
               </div>
             </FadeUp>
-          </div>
-        </section>
-      )}
+          )}
 
-      {/* Grid */}
-      <section className="py-16 lg:py-24 bg-[var(--color-ocean-900)]">
-        <div className="max-w-screen-xl mx-auto px-6 lg:px-10">
           <div className="grid lg:grid-cols-3 gap-8">
             {rest.map(({ tag, date, title, excerpt, img }, i) => (
               <FadeUp key={title} delay={i * 80}>
-                <article className="group cursor-pointer">
-                  <div className="aspect-video overflow-hidden bg-[var(--color-ocean-800)] mb-5">
-                    <img src={img} alt={title} className="w-full h-full object-cover opacity-60 group-hover:opacity-90 group-hover:scale-105 transition-all duration-600" />
+                <article className="bg-white p-6 rounded-2xl border-2 border-sky-200 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full flex flex-col">
+                  <div className="aspect-video overflow-hidden rounded-xl bg-sky-100 mb-5">
+                    <img src={img} alt={title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
                   </div>
                   <div className="flex items-center justify-between mb-3">
-                    <span className="font-wide text-[var(--color-aqua)] text-[9px] tracking-[0.3em] uppercase">{tag}</span>
-                    <span className="font-wide text-white/28 text-[9px] tracking-[0.2em] uppercase">{date}</span>
+                    <span className="font-wide text-sky-600 text-[10px] tracking-[0.3em] uppercase font-bold bg-sky-100 px-2.5 py-0.5 rounded">{tag}</span>
+                    <span className="font-wide text-slate-500 text-[10px] tracking-[0.2em] uppercase font-semibold">{date}</span>
                   </div>
-                  <h3 className="font-display text-white text-xl lg:text-2xl tracking-[0.02em] uppercase mb-3 group-hover:text-[var(--color-aqua)] transition-colors duration-300" style={{ fontWeight: 800 }}>{title}</h3>
-                  <p className="font-body text-white/38 text-sm leading-relaxed" style={{ fontWeight: 300 }}>{excerpt}</p>
+                  <h3 className="font-display text-slate-900 text-xl lg:text-2xl tracking-[0.02em] uppercase mb-3 font-extrabold">{title}</h3>
+                  <p className="font-body text-slate-600 text-sm leading-relaxed mb-6 flex-1 font-light">{excerpt}</p>
                 </article>
               </FadeUp>
             ))}
@@ -102,16 +97,17 @@ export default function News() {
         </div>
       </section>
 
-      {/* Follow CTA */}
-      <section className="py-16 bg-[var(--color-ocean-950)] text-center">
+      {/* CTA */}
+      <section className="py-20 bg-sky-50 border-t border-sky-200 text-center">
         <FadeUp>
           <div className="max-w-screen-xl mx-auto px-6 lg:px-10">
-            <p className="font-wide text-white/40 text-[11px] tracking-[0.25em] uppercase mb-4">Stay Updated</p>
-            <h3 className="font-display text-white text-2xl lg:text-4xl mb-8" style={{ fontWeight: 900 }}>FOLLOW @OCEANCITYMARATHON</h3>
+            <h3 className="font-display text-slate-900 text-3xl lg:text-5xl leading-none mb-6 font-black">STAY UPDATED</h3>
+            <p className="font-body text-slate-600 text-base max-w-md mx-auto mb-8 font-normal">
+              Follow @oceancitymarathon on Instagram for live updates, athlete announcements, and race day information.
+            </p>
             <a href="https://instagram.com/oceancitymarathon" target="_blank" rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 font-display text-[13px] tracking-[0.15em] uppercase border border-[var(--color-aqua)] text-[var(--color-aqua)] hover:bg-[var(--color-aqua)] hover:text-white px-8 py-4 transition-all duration-300"
-              style={{ fontWeight: 700 }}>
-              INSTAGRAM →
+              className="inline-flex items-center gap-3 font-display text-[14px] tracking-[0.15em] uppercase bg-gradient-to-r from-sky-600 to-cyan-600 hover:from-sky-500 hover:to-cyan-500 text-white px-10 py-5 transition-all duration-300 font-extrabold shadow-md rounded-lg">
+              FOLLOW @OCEANCITYMARATHON
             </a>
           </div>
         </FadeUp>
