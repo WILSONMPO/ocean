@@ -16,7 +16,7 @@
   --color-ocean-300: #f0f9ff;
   --color-ocean-200: #f8fafc;
   --color-ocean-100: #ffffff;
-  --color-ocean-50:  #ffffff;
+  --color-ocean-50: #ffffff;
 
   --color-aqua: #0284c7;
   --color-sand: #d97706;
@@ -34,13 +34,15 @@
   --color-ocean-300: #f0f9ff;
   --color-ocean-200: #f8fafc;
   --color-ocean-100: #ffffff;
-  --color-ocean-50:  #ffffff;
+  --color-ocean-50: #ffffff;
   --color-aqua: #0284c7;
   --color-sand: #d97706;
   --color-salt: #0f172a;
 }
 
-html, body, #root {
+html,
+body,
+#root {
   min-height: 100%;
 }
 
@@ -72,14 +74,31 @@ html {
 }
 
 /* Scrollbar */
-::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: #e0f2fe; }
-::-webkit-scrollbar-thumb { background: #0284c7; border-radius: 4px; }
-::-webkit-scrollbar-thumb:hover { background: #0369a1; }
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e0f2fe;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0284c7;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0369a1;
+}
 
 /* Display font utility */
-.font-display { font-family: 'Barlow Condensed', sans-serif; }
-.font-wide { font-family: 'Barlow', sans-serif; }
+.font-display {
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+.font-wide {
+  font-family: 'Barlow', sans-serif;
+}
 
 /* Cinematic text-stroke effect */
 .text-stroke {
@@ -124,8 +143,15 @@ html {
 
 /* Section fade-in animation */
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(32px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .animate-fade-up {
@@ -133,8 +159,15 @@ html {
 }
 
 @keyframes countPulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.7; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
 }
 
 .animate-count-pulse {
@@ -143,8 +176,13 @@ html {
 
 /* Horizontal marquee */
 @keyframes marquee {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .marquee-inner {
@@ -161,5 +199,3 @@ html {
 .num-glow-blue {
   text-shadow: 0 0 30px rgba(2, 132, 199, 0.35);
 }
-
-
