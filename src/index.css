@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,700&family=Barlow:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-wide: 'Barlow', sans-serif;
+
+  --color-ocean-950: #020b18;
+  --color-ocean-900: #041424;
+  --color-ocean-800: #072039;
+  --color-ocean-700: #0a2f52;
+  --color-ocean-600: #0e4070;
+  --color-ocean-500: #1259a0;
+  --color-ocean-400: #1a75cc;
+  --color-ocean-300: #3d9be0;
+  --color-ocean-200: #7dc0f0;
+  --color-ocean-100: #c2e4fa;
+  --color-ocean-50: #eaf6ff;
+
+  --color-aqua: #00c2e0;
+  --color-sand: #e8d5b0;
+  --color-salt: #f5f8fa;
+}
+
+:root {
+  --color-ocean-950: #020b18;
+  --color-ocean-900: #041424;
+  --color-ocean-800: #072039;
+  --color-ocean-700: #0a2f52;
+  --color-ocean-600: #0e4070;
+  --color-ocean-500: #1259a0;
+  --color-ocean-400: #1a75cc;
+  --color-ocean-300: #3d9be0;
+  --color-ocean-200: #7dc0f0;
+  --color-ocean-100: #c2e4fa;
+  --color-ocean-50:  #eaf6ff;
+  --color-aqua: #00c2e0;
+  --color-sand: #e8d5b0;
+  --color-salt: #f5f8fa;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #020b18;
+  color: #f5f8fa;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Grain overlay */
+.grain::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.35;
+}
+
+/* Scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #1259a0; border-radius: 2px; }
+
+/* Display font utility */
+.font-display { font-family: 'Barlow Condensed', sans-serif; }
+.font-wide { font-family: 'Barlow', sans-serif; }
+
+/* Cinematic text-stroke effect */
+.text-stroke {
+  -webkit-text-stroke: 1px rgba(255,255,255,0.15);
+  color: transparent;
+}
+
+/* Section fade-in animation */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes countPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.animate-count-pulse {
+  animation: countPulse 1s ease-in-out;
+}
+
+/* Horizontal marquee */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.marquee-inner {
+  animation: marquee 20s linear infinite;
+  display: flex;
+  width: max-content;
+}
+
+/* Number glow */
+.num-glow {
+  text-shadow: 0 0 60px rgba(26, 117, 204, 0.4);
+}

@@ -1,0 +1,11 @@
+{
+  "title": "Ocean City Community Marathon 2026",
+  "description": "Discover the Ocean City Community Marathon 2026, a premium platform for runners and sponsors, promoting health, community, and social impact in Tanzania.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
