@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router";
 import FadeUp from "../components/FadeUp";
+import simbuImg from "./simbu.png";
 
 function useCountdown(target: Date) {
   const calc = () => {
@@ -113,12 +114,12 @@ function Hero() {
               <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-300 via-sky-400 to-blue-500 opacity-80 blur-lg animate-pulse" />
               <div className="relative overflow-hidden rounded-2xl border-2 border-sky-200 bg-gradient-to-b from-sky-900 to-slate-900 shadow-2xl">
                 <img
-                  src="/simbu.png"
+                  src={simbuImg}
                   alt="Alphonce Simbu — Tanzanian Elite Athlete"
                   className="w-full h-[400px] lg:h-[480px] object-cover object-top hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-sky-950 via-sky-950/30 to-transparent" />
-                
+
                 <div className="absolute top-4 right-4 bg-gradient-to-r from-sky-500 to-cyan-500 text-white px-4 py-1.5 text-[10px] font-wide tracking-[0.25em] uppercase font-bold shadow-lg rounded-full border border-white/30">
                   ELITE ATHLETE
                 </div>
@@ -457,7 +458,7 @@ function Athletes() {
         </FadeUp>
         <div className="grid lg:grid-cols-2 gap-8">
           {[
-            { name: "ALPHONCE SIMBU", role: "ELITE ATHLETE & MARATHON CHAMPION", tag: "OCEAN CITY MARATHON", img: "/simbu.png" },
+            { name: "ALPHONCE SIMBU", role: "ELITE ATHLETE & MARATHON CHAMPION", tag: "OCEAN CITY MARATHON", img: simbuImg },
             { name: "FAILUNA ABDI MATANGA", role: "ELITE ATHLETE", tag: "OCEAN CITY MARATHON", img: "https://images.unsplash.com/photo-1746046489457-9628dc3b8a1f?w=800&h=550&fit=crop&auto=format" },
           ].map(({ name, role, tag, img }) => (
             <FadeUp key={name} delay={100}>
@@ -694,18 +695,18 @@ export default function Home() {
   return (
     <div className="relative">
       {/* Requirement 2: Fixed background picture of Simbu overlaid with ocean theme visible as user scrolls down */}
-      <div 
-        className="fixed inset-0 pointer-events-none z-0 overflow-hidden" 
+      <div
+        className="fixed inset-0 pointer-events-none z-0 overflow-hidden"
         aria-hidden="true"
       >
         {/* Subtle Ocean Light & Cyan Gradient Backdrop */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-sky-200/25 via-cyan-100/10 to-transparent" />
-        
+
         {/* Alphonce Simbu Watermark Background aligned right/center */}
         <div className="absolute right-0 bottom-0 top-0 w-full max-w-4xl opacity-15 mix-blend-multiply flex items-center justify-end pr-4 lg:pr-16">
-          <img 
-            src="/simbu.png" 
-            alt="" 
+          <img
+            src={simbuImg}
+            alt="Alphonce Simbu Background"
             className="h-[85vh] object-contain object-right filter contrast-125 saturate-125 transition-opacity duration-1000"
           />
         </div>
