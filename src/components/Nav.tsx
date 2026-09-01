@@ -52,9 +52,8 @@ export default function Nav() {
         <div className="hidden lg:flex items-center gap-8">
           {links.map(({ label, to }) => (
             <Link key={to} to={to}
-              className={`font-wide text-[11px] tracking-[0.18em] uppercase transition-all duration-200 ${
-                location.pathname === to ? "text-sky-600 font-extrabold border-b-2 border-sky-500 pb-0.5" : "text-slate-700 hover:text-sky-600 font-semibold"
-              }`}>
+              className={`font-wide text-[11px] tracking-[0.18em] uppercase transition-all duration-200 ${location.pathname === to ? "text-sky-600 font-extrabold border-b-2 border-sky-500 pb-0.5" : "text-slate-700 hover:text-sky-600 font-semibold"
+                }`}>
               {label}
             </Link>
           ))}
@@ -83,9 +82,8 @@ export default function Nav() {
         <div className="px-6 py-6 flex flex-col gap-1">
           {links.map(({ label, to }) => (
             <Link key={to} to={to}
-              className={`font-wide text-[13px] tracking-[0.2em] uppercase py-4 border-b border-sky-100 transition-colors ${
-                location.pathname === to ? "text-sky-600 font-extrabold" : "text-slate-700 font-medium"
-              }`}>
+              className={`font-wide text-[13px] tracking-[0.2em] uppercase py-4 border-b border-sky-100 transition-colors ${location.pathname === to ? "text-sky-600 font-extrabold" : "text-slate-700 font-medium"
+                }`}>
               {label}
             </Link>
           ))}

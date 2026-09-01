@@ -107,14 +107,12 @@ export default function Registration() {
                 <div className="flex items-center justify-between mb-10 pb-6 border-b-2 border-sky-200">
                   {["01 Personal Details", "02 Category", "03 Confirm"].map((title, i) => (
                     <div key={title} className="flex items-center gap-2">
-                      <div className={`w-8 h-8 rounded-full flex items-center justify-center font-display text-sm font-extrabold ${
-                        step === i + 1 ? "bg-sky-600 text-white shadow-md" : step > i + 1 ? "bg-emerald-500 text-white" : "bg-sky-100 text-sky-700 border border-sky-300"
-                      }`}>
+                      <div className={`w-8 h-8 rounded-full flex items-center justify-center font-display text-sm font-extrabold ${step === i + 1 ? "bg-sky-600 text-white shadow-md" : step > i + 1 ? "bg-emerald-500 text-white" : "bg-sky-100 text-sky-700 border border-sky-300"
+                        }`}>
                         {step > i + 1 ? "✓" : i + 1}
                       </div>
-                      <span className={`font-wide text-xs tracking-[0.1em] uppercase hidden sm:inline ${
-                        step === i + 1 ? "text-sky-600 font-extrabold" : "text-slate-500 font-semibold"
-                      }`}>{title}</span>
+                      <span className={`font-wide text-xs tracking-[0.1em] uppercase hidden sm:inline ${step === i + 1 ? "text-sky-600 font-extrabold" : "text-slate-500 font-semibold"
+                        }`}>{title}</span>
                     </div>
                   ))}
                 </div>
@@ -165,10 +163,9 @@ export default function Registration() {
                           { id: "5k", km: "5KM", label: "COMMUNITY RUN", desc: "For families, first-timers & groups" },
                         ].map(({ id, km, label, desc }) => (
                           <label key={id} onClick={() => update("category", id)}
-                            className={`flex items-center gap-4 p-5 rounded-xl border-2 cursor-pointer transition-all ${
-                              form.category === id ? "border-sky-600 bg-sky-50/80 shadow-md" : "border-sky-200 hover:border-sky-400 bg-white"
-                            }`}>
-                            <input type="radio" name="category" checked={form.category === id} onChange={() => {}} className="accent-sky-600" />
+                            className={`flex items-center gap-4 p-5 rounded-xl border-2 cursor-pointer transition-all ${form.category === id ? "border-sky-600 bg-sky-50/80 shadow-md" : "border-sky-200 hover:border-sky-400 bg-white"
+                              }`}>
+                            <input type="radio" name="category" checked={form.category === id} onChange={() => { }} className="accent-sky-600" />
                             <div className="font-display text-sky-600 text-3xl font-black">{km}</div>
                             <div>
                               <div className="font-display text-slate-900 text-lg tracking-[0.05em] uppercase font-black">{label}</div>

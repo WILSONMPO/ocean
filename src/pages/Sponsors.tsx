@@ -82,9 +82,8 @@ export default function Sponsors() {
           <div className="space-y-6">
             {packages.map(({ tier, price, color, highlight, perks }, i) => (
               <FadeUp key={tier} delay={i * 70}>
-                <div className={`p-8 rounded-2xl border-2 transition-all duration-300 ${
-                  highlight ? "bg-gradient-to-r from-sky-900 via-sky-800 to-cyan-950 text-white border-cyan-300 shadow-xl" : "bg-white text-slate-900 border-sky-200 shadow-md hover:shadow-lg hover:border-sky-400"
-                }`}>
+                <div className={`p-8 rounded-2xl border-2 transition-all duration-300 ${highlight ? "bg-gradient-to-r from-sky-900 via-sky-800 to-cyan-950 text-white border-cyan-300 shadow-xl" : "bg-white text-slate-900 border-sky-200 shadow-md hover:shadow-lg hover:border-sky-400"
+                  }`}>
                   <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-6">
                     <div>
                       <div className="w-12 h-1 mb-2 rounded-full" style={{ background: color }} />
@@ -92,9 +91,8 @@ export default function Sponsors() {
                       <div className="font-wide text-lg lg:text-xl tracking-[0.05em] uppercase font-extrabold" style={{ color: highlight ? "#7dd3fc" : color }}>{price}</div>
                     </div>
                     <Link to="/contact"
-                      className={`inline-flex items-center justify-center font-display text-[13px] tracking-[0.15em] uppercase px-8 py-4 transition-all duration-300 font-extrabold rounded-lg ${
-                        highlight ? "bg-gradient-to-r from-cyan-400 to-sky-500 hover:from-cyan-300 hover:to-sky-400 text-sky-950 shadow-lg" : "bg-gradient-to-r from-sky-600 to-cyan-600 hover:from-sky-500 hover:to-cyan-500 text-white shadow-md"
-                      }`}>
+                      className={`inline-flex items-center justify-center font-display text-[13px] tracking-[0.15em] uppercase px-8 py-4 transition-all duration-300 font-extrabold rounded-lg ${highlight ? "bg-gradient-to-r from-cyan-400 to-sky-500 hover:from-cyan-300 hover:to-sky-400 text-sky-950 shadow-lg" : "bg-gradient-to-r from-sky-600 to-cyan-600 hover:from-sky-500 hover:to-cyan-500 text-white shadow-md"
+                        }`}>
                       ENQUIRE FOR {tier}
                     </Link>
                   </div>
