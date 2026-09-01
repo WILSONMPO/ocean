@@ -50,9 +50,10 @@ function Hero() {
           <span className="font-wide text-[10px] text-[var(--color-aqua)] tracking-[0.35em] uppercase">Ocean City Community Marathon · Tanzania</span>
         </div>
 
-        <h1 className="font-display text-white leading-none mb-4" style={{ fontWeight: 900, fontSize: "clamp(58px, 11vw, 152px)", letterSpacing: "-0.01em" }}>
+        <h1 className="font-display text-white leading-[0.92] mb-6" style={{ fontWeight: 900, fontSize: "clamp(40px, 7.8vw, 112px)", letterSpacing: "-0.01em" }}>
           OCEAN CITY<br />
-          <span style={{ WebkitTextStroke: "1.5px rgba(255,255,255,0.25)", color: "transparent" }}>MARATHON</span>
+          <span className="text-[var(--color-aqua)]">COMMUNITY MARATHON</span><br />
+          <span style={{ WebkitTextStroke: "1.5px rgba(255,255,255,0.3)", color: "transparent" }}>2026</span>
         </h1>
 
         <div className="flex flex-wrap items-center gap-x-8 gap-y-2 mb-8">
