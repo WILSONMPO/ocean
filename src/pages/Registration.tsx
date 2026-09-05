@@ -165,7 +165,7 @@ export default function Registration() {
                           <label key={id} onClick={() => update("category", id)}
                             className={`flex items-center gap-4 p-5 rounded-xl border-2 cursor-pointer transition-all ${form.category === id ? "border-sky-600 bg-sky-50/80 shadow-md" : "border-sky-200 hover:border-sky-400 bg-white"
                               }`}>
-                            <input type="radio" name="category" checked={form.category === id} onChange={() => { }} className="accent-sky-600" />
+                            <input type="radio" name="category" checked={form.category === id} onChange={() => update("category", id)} className="accent-sky-600" />
                             <div className="font-display text-sky-600 text-3xl font-black">{km}</div>
                             <div>
                               <div className="font-display text-slate-900 text-lg tracking-[0.05em] uppercase font-black">{label}</div>

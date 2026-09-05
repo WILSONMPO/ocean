@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router";
 import FadeUp from "../components/FadeUp";
-import simbuImg from "./simbu.png";
+
+const simbuImg = "https://dailynews.co.tz/wp-content/uploads/2025/09/Simbu-2.jpg";
 
 function useCountdown(target: Date) {
   const calc = () => {
@@ -129,8 +130,8 @@ function Hero() {
                   <div className="font-display text-white text-3xl lg:text-4xl font-extrabold leading-none uppercase mb-2">
                     ALPHONCE SIMBU
                   </div>
-                  <p className="font-body text-sky-100 text-xs leading-relaxed font-light">
-                    World Athletics Medalist & Tanzanian Marathon Icon inspiring thousands at the 2026 Ocean City Community Marathon.
+                  <p className="font-body text-sky-100 text-xs leading-relaxed font-semibold">
+                    ALPHONCE SIMBU ndio bingwa wa kwanza wa Ocean City Community Marathon 2021 na alishinda GARI aina ya TOYOTA SIENTA
                   </p>
                 </div>
               </div>
