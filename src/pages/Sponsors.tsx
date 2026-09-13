@@ -32,8 +32,8 @@ export default function Sponsors() {
         section="Sponsorship"
         title="PARTNER WITH<br /><span className='text-cyan-300'>THE MOVEMENT.</span>"
         subtitle="Sponsorship opportunities for the 2026 Ocean City Community Marathon."
-        img="https://images.unsplash.com/photo-1751400042022-ae67e0dc06e2?w=1600&h=900&fit=crop&auto=format"
-        imgAlt="Corporate runners and sponsors"
+        img="/images/marathon_21.jpg"
+        imgAlt="Ocean City Marathon sponsors and community"
         cta={{ label: "BECOME A SPONSOR", to: "/contact" }}
       />
 

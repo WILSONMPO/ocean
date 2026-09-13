@@ -8,8 +8,8 @@ export default function SportsTourism() {
         section="Sports Tourism"
         title="DISCOVER<br />TANZANIA BY<br /><span className='text-cyan-300'>THE OCEAN.</span>"
         subtitle="Combine your marathon experience with East Africa's most breathtaking coastal landscape."
-        img="https://images.unsplash.com/photo-1474524955719-b9f87c50ce47?w=1600&h=900&fit=crop&auto=format"
-        imgAlt="Dar es Salaam ocean coastline"
+        img="/images/marathon_08.jpg"
+        imgAlt="Coco Beach coastline and marathon route"
       />
 
       <section className="py-24 lg:py-36 bg-white text-slate-900">
@@ -78,17 +78,17 @@ export default function SportsTourism() {
               {
                 title: "COCO BEACH SHORELINE",
                 desc: "The heartbeat of the race. Run with sea breezes and ocean views stretching to the horizon.",
-                img: "https://images.unsplash.com/photo-1773864051846-a26915bb3019?w=600&h=400&fit=crop&auto=format",
+                img: "/images/marathon_09.jpg",
               },
               {
                 title: "ISLAND EXCURSIONS",
                 desc: "Explore nearby marine reserves — Bongoyo and Mbudya Islands — just a short boat trip from the mainland.",
-                img: "https://images.unsplash.com/photo-1439405326854-014607f694d7?w=600&h=400&fit=crop&auto=format",
+                img: "/images/marathon_10.jpg",
               },
               {
                 title: "SWAHILI HOSPITALITY",
                 desc: "Experience the legendary warmth, cuisine, and vibrant energy of Tanzanian culture.",
-                img: "https://images.unsplash.com/photo-1474524955719-b9f87c50ce47?w=600&h=400&fit=crop&auto=format",
+                img: "/images/marathon_11.jpg",
               },
             ].map(({ title, desc, img }, i) => (
               <FadeUp key={title} delay={i * 80}>

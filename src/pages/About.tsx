@@ -9,8 +9,8 @@ export default function About() {
         section="About"
         title="BORN IN<br />DAR ES SALAAM.<br /><span className='text-cyan-300'>BUILT FOR THE WORLD.</span>"
         subtitle="Ocean City Community Marathon — Tanzania's premier coastal marathon."
-        img="https://images.unsplash.com/photo-1439405326854-014607f694d7?w=1600&h=900&fit=crop&auto=format"
-        imgAlt="Ocean at golden hour"
+        img="/images/marathon_01.jpg"
+        imgAlt="Ocean City Marathon event and runners"
       />
 
       <section className="py-24 lg:py-36 bg-white text-slate-900">

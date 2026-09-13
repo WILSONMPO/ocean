@@ -9,8 +9,8 @@ export default function Marathon() {
         section="The Marathon"
         title="AN EVENT.<br />A MOVEMENT.<br /><span className='text-cyan-300'>A NATION.</span>"
         subtitle="12 December 2026 · Coco Beach, Dar es Salaam, Tanzania"
-        img="https://images.unsplash.com/photo-1774050021111-8118f1e3c013?w=1600&h=900&fit=crop&auto=format"
-        imgAlt="Marathon runners at the finish"
+        img="/images/marathon_02.jpg"
+        imgAlt="Ocean City Marathon runners at the finish"
         cta={{ label: "REGISTER TO RUN", to: "/registration" }}
       />
 

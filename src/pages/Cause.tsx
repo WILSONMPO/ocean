@@ -9,8 +9,8 @@ export default function Cause() {
         section="The Cause"
         title="EVERY STEP<br />CAN CHANGE<br /><span className='text-cyan-300'>A LIFE.</span>"
         subtitle="The 2026 Ocean City Community Marathon aims to provide health insurance for 300 orphaned children."
-        img="https://images.unsplash.com/photo-1524603642524-b02ea114f009?w=1600&h=900&fit=crop&auto=format"
-        imgAlt="Children running together"
+        img="/images/marathon_07.jpg"
+        imgAlt="Ocean City Community Marathon cause and runners"
         cta={{ label: "RUN FOR A CAUSE", to: "/registration" }}
       />
 

@@ -35,8 +35,8 @@ function Hero() {
       {/* Background ocean image preserved as requested */}
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1773864051846-a26915bb3019?w=1800&h=1100&fit=crop&auto=format"
-          alt="Coastal highway at dawn"
+          src="/images/marathon_22.jpg"
+          alt="Ocean City Marathon coastal scene"
           className="w-full h-full object-cover opacity-50 mix-blend-overlay"
           style={{ objectPosition: "center 38%" }}
         />
@@ -194,8 +194,8 @@ function EventIntro() {
             <div className="relative">
               <div className="aspect-[4/5] overflow-hidden rounded-2xl bg-sky-100 shadow-2xl border-4 border-white">
                 <img
-                  src="https://images.unsplash.com/photo-1774050021111-8118f1e3c013?w=800&h=1000&fit=crop&auto=format"
-                  alt="Runners crossing the finish line"
+                  src="/images/marathon_23.jpg"
+                  alt="Runners crossing the finish line at Ocean City Community Marathon"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 />
               </div>
@@ -214,9 +214,9 @@ function EventIntro() {
 /* ── Race Distances (preview) ─────────────────────────── */
 function RacePreview() {
   const races = [
-    { km: "21", label: "HALF MARATHON", target: "THE COMPETITIVE RUNNER", img: "https://images.unsplash.com/photo-1746046318047-4e4860c53aca?w=600&h=800&fit=crop&auto=format" },
-    { km: "10", label: "ROAD RACE", target: "THE CHALLENGER", img: "https://images.unsplash.com/photo-1774050250283-2444f7d634d5?w=600&h=800&fit=crop&auto=format" },
-    { km: "5", label: "COMMUNITY RUN", target: "EVERYONE", img: "https://images.unsplash.com/photo-1459183885421-5cc683b8dbba?w=600&h=800&fit=crop&auto=format" },
+    { km: "21", label: "HALF MARATHON", target: "THE COMPETITIVE RUNNER", img: "/images/marathon_03.jpg" },
+    { km: "10", label: "ROAD RACE", target: "THE CHALLENGER", img: "/images/marathon_04.jpg" },
+    { km: "5", label: "COMMUNITY RUN", target: "EVERYONE", img: "/images/marathon_05.jpg" },
   ];
 
   return (
@@ -273,8 +273,8 @@ function ImpactPreview() {
             <div className="relative">
               <div className="aspect-square overflow-hidden rounded-2xl bg-sky-50 shadow-2xl border-4 border-sky-100">
                 <img
-                  src="https://images.unsplash.com/photo-1524603642524-b02ea114f009?w=700&h=700&fit=crop&auto=format"
-                  alt="Children running together"
+                  src="/images/marathon_24.jpg"
+                  alt="Ocean City Community Marathon cause and children"
                   className="w-full h-full object-cover"
                   style={{ objectPosition: "center top" }}
                 />
@@ -363,8 +363,8 @@ function OceanCity() {
       <div className="relative h-[60vh] lg:h-[80vh] flex items-end">
         <div className="absolute inset-0 bg-sky-950">
           <img
-            src="https://images.unsplash.com/photo-1474524955719-b9f87c50ce47?w=1800&h=1100&fit=crop&auto=format"
-            alt="Ocean shoreline at golden hour"
+            src="/images/marathon_25.jpg"
+            alt="Runners along Coco Beach ocean shoreline"
             className="w-full h-full object-cover opacity-65"
           />
           <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(3,105,161,0.95) 0%, rgba(2,132,199,0.3) 60%, transparent 100%)" }} />
@@ -460,7 +460,7 @@ function Athletes() {
         <div className="grid lg:grid-cols-2 gap-8">
           {[
             { name: "ALPHONCE SIMBU", role: "ELITE ATHLETE & MARATHON CHAMPION", tag: "OCEAN CITY MARATHON", img: simbuImg },
-            { name: "FAILUNA ABDI MATANGA", role: "ELITE ATHLETE", tag: "OCEAN CITY MARATHON", img: "https://images.unsplash.com/photo-1746046489457-9628dc3b8a1f?w=800&h=550&fit=crop&auto=format" },
+            { name: "FAILUNA ABDI MATANGA", role: "ELITE ATHLETE", tag: "OCEAN CITY MARATHON", img: "/images/marathon_26.jpg" },
           ].map(({ name, role, tag, img }) => (
             <FadeUp key={name} delay={100}>
               <div className="group relative overflow-hidden rounded-2xl bg-sky-950 shadow-xl border-2 border-sky-300/40" style={{ aspectRatio: "3/2" }}>
@@ -544,19 +544,19 @@ function NewsPreview() {
       tag: "ANNOUNCEMENT", date: "DEC 2026",
       title: "Ocean City Marathon 2026 Date Confirmed: 12 December",
       excerpt: "Plus One Events Solutions confirms the third edition at Coco Beach, Dar es Salaam.",
-      img: "https://images.unsplash.com/photo-1774050021111-8118f1e3c013?w=600&h=400&fit=crop&auto=format",
+      img: "/images/marathon_12.jpg",
     },
     {
       tag: "CAUSE", date: "DEC 2026",
       title: "2026 Marathon to Fund Health Insurance for 300 Children",
       excerpt: "Every step fuels our goal to provide health insurance coverage for 300 orphaned children across Tanzania.",
-      img: "https://images.unsplash.com/photo-1459183885421-5cc683b8dbba?w=600&h=400&fit=crop&auto=format",
+      img: "/images/marathon_13.jpg",
     },
     {
       tag: "SPORTS TOURISM", date: "COMING SOON",
       title: "Bahari Tour: An Elite Experience for International Runners",
       excerpt: "Details of the exclusive Bahari Tour for international elite athletes will be announced soon.",
-      img: "https://images.unsplash.com/photo-1474524955719-b9f87c50ce47?w=600&h=400&fit=crop&auto=format",
+      img: "/images/marathon_14.jpg",
     },
   ];
 
@@ -604,13 +604,13 @@ function NewsPreview() {
 /* ── Instagram ────────────────────────────────────────── */
 function Instagram() {
   const imgs = [
-    { src: "https://images.unsplash.com/photo-1774050021111-8118f1e3c013?w=500&h=500&fit=crop&auto=format", big: true },
-    { src: "https://images.unsplash.com/photo-1774050250283-2444f7d634d5?w=300&h=300&fit=crop&auto=format", big: false },
-    { src: "https://images.unsplash.com/photo-1459183885421-5cc683b8dbba?w=300&h=300&fit=crop&auto=format", big: false },
-    { src: "https://images.unsplash.com/photo-1474524955719-b9f87c50ce47?w=300&h=300&fit=crop&auto=format", big: false },
-    { src: "https://images.unsplash.com/photo-1625151012343-00d17ffb40dd?w=300&h=300&fit=crop&auto=format", big: false },
-    { src: "https://images.unsplash.com/photo-1439405326854-014607f694d7?w=300&h=300&fit=crop&auto=format", big: false },
-    { src: "https://images.unsplash.com/photo-1607949666679-73bbe2fb26a4?w=300&h=300&fit=crop&auto=format", big: false },
+    { src: "/images/marathon_01.jpg", big: true },
+    { src: "/images/marathon_02.jpg", big: false },
+    { src: "/images/marathon_15.jpg", big: false },
+    { src: "/images/marathon_16.jpg", big: false },
+    { src: "/images/marathon_17.jpg", big: false },
+    { src: "/images/marathon_18.jpg", big: false },
+    { src: "/images/marathon_19.jpg", big: false },
   ];
 
   return (
@@ -653,8 +653,8 @@ function FinalCTA() {
     <section className="relative overflow-hidden min-h-[75vh] flex items-center bg-gradient-to-br from-sky-950 via-sky-900 to-cyan-950">
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1746046318047-4e4860c53aca?w=1800&h=1100&fit=crop&auto=format"
-          alt="Runners at finish"
+          src="/images/marathon_27.jpg"
+          alt="Runners at Ocean City Marathon finish"
           className="w-full h-full object-cover opacity-40 mix-blend-overlay"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-sky-950/95 via-sky-900/80 to-cyan-950/90" />

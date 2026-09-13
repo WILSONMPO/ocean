@@ -17,8 +17,8 @@ export default function Contact() {
         section="Contact"
         title="GET IN<br /><span className='text-cyan-300'>TOUCH.</span>"
         subtitle="Registration enquiries, sponsorship, media, and general contact."
-        img="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1600&h=900&fit=crop&auto=format"
-        imgAlt="Ocean waves"
+        img="/images/marathon_20.jpg"
+        imgAlt="Ocean City Marathon runners and contact"
       />
 
       <section className="py-24 lg:py-36 bg-gradient-to-b from-sky-50/60 to-white text-slate-900">

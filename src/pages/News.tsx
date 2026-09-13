@@ -7,37 +7,37 @@ const articles = [
     tag: "ANNOUNCEMENT", date: "December 2026", featured: true,
     title: "Ocean City Marathon 2026 Date Confirmed: 12 December",
     excerpt: "Plus One Events Solutions confirms the third edition of the Ocean City Community Marathon will take place on 12 December 2026 at Coco Beach, Dar es Salaam. Expected participation of 3,000+ runners, families, corporates and youth groups.",
-    img: "https://images.unsplash.com/photo-1774050021111-8118f1e3c013?w=900&h=600&fit=crop&auto=format",
+    img: "/images/marathon_12.jpg",
   },
   {
     tag: "CAUSE", date: "December 2026", featured: false,
     title: "2026 Marathon to Fund Health Insurance for 300 Orphaned Children",
     excerpt: "This year's event carries a powerful social mission. Every step fuels our goal to provide health insurance coverage for 300 orphaned children across Tanzania.",
-    img: "https://images.unsplash.com/photo-1459183885421-5cc683b8dbba?w=600&h=400&fit=crop&auto=format",
+    img: "/images/marathon_13.jpg",
   },
   {
     tag: "SPORTS TOURISM", date: "Coming Soon", featured: false,
     title: "Bahari Tour: An Exclusive Experience for International Elite Runners",
     excerpt: "Details of the Bahari Tour curated experience for international elite athletes will be announced soon. Follow @oceancitymarathon for updates.",
-    img: "https://images.unsplash.com/photo-1474524955719-b9f87c50ce47?w=600&h=400&fit=crop&auto=format",
+    img: "/images/marathon_14.jpg",
   },
   {
     tag: "RACE", date: "Coming Soon", featured: false,
     title: "Race Categories and Registration Details — Open via WhatsApp",
     excerpt: "Official race categories for the 2026 edition are confirmed. Register via WhatsApp (+255 613 786 110) for 21KM, 10KM, and 5KM distances.",
-    img: "https://images.unsplash.com/photo-1746046318047-4e4860c53aca?w=600&h=400&fit=crop&auto=format",
+    img: "/images/marathon_15.jpg",
   },
   {
     tag: "SPONSORSHIP", date: "Coming Soon", featured: false,
     title: "Sponsorship Packages Now Available — Partner with the Movement",
     excerpt: "Five premium sponsorship packages are available for the 2026 Ocean City Community Marathon, from Tanzanite (TZS 125M) to Spotbuy (TZS 20M). Contact us to enquire.",
-    img: "https://images.unsplash.com/photo-1751400042022-ae67e0dc06e2?w=600&h=400&fit=crop&auto=format",
+    img: "/images/marathon_16.jpg",
   },
   {
     tag: "LEGACY", date: "August 2026", featured: false,
     title: "A Look Back: The 2021 Inaugural Ocean City Community Marathon",
     excerpt: "The 2021 inaugural marathon awarded Toyota Passo vehicles to the 21km male and female winners, and distributed TZS 25.1 million in prize money to 18 winners — a historic beginning.",
-    img: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&h=400&fit=crop&auto=format",
+    img: "/images/marathon_17.jpg",
   },
 ];
 
@@ -51,8 +51,8 @@ export default function News() {
         section="News & Updates"
         title="LATEST FROM<br /><span className='text-cyan-300'>OCEAN CITY.</span>"
         subtitle="Official announcements, cause updates, athlete features, and marathon stories."
-        img="https://images.unsplash.com/photo-1774050021111-8118f1e3c013?w=1600&h=900&fit=crop&auto=format"
-        imgAlt="Marathon runners"
+        img="/images/marathon_18.jpg"
+        imgAlt="Ocean City Marathon news and updates"
       />
 
       <section className="py-24 lg:py-36 bg-gradient-to-b from-sky-50/60 to-white text-slate-900">

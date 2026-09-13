@@ -7,17 +7,17 @@ export default function Race() {
     {
       km: "21", label: "HALF MARATHON", target: "THE COMPETITIVE RUNNER",
       desc: "The premium race. A test of endurance, strategy, and speed along Dar es Salaam's breathtaking coastline. For runners seeking a serious personal challenge on one of East Africa's most scenic courses.",
-      img: "https://images.unsplash.com/photo-1746046318047-4e4860c53aca?w=900&h=600&fit=crop&auto=format",
+      img: "/images/marathon_03.jpg",
     },
     {
       km: "10", label: "ROAD RACE", target: "THE CHALLENGER",
       desc: "A powerful mid-distance test. Perfect for those stepping up their race experience — or pushing for a new personal best. Experience the energy of Ocean City with every stride.",
-      img: "https://images.unsplash.com/photo-1774050250283-2444f7d634d5?w=900&h=600&fit=crop&auto=format",
+      img: "/images/marathon_04.jpg",
     },
     {
       km: "5", label: "COMMUNITY RUN", target: "EVERYONE",
       desc: "For everyone. Families, first-timers, youth groups, and corporate teams. This is where community becomes movement — and every step counts toward the 300 children goal.",
-      img: "https://images.unsplash.com/photo-1459183885421-5cc683b8dbba?w=900&h=600&fit=crop&auto=format",
+      img: "/images/marathon_05.jpg",
     },
   ];
 
@@ -27,8 +27,8 @@ export default function Race() {
         section="Race Categories"
         title="CHOOSE YOUR<br /><span className='text-cyan-300'>DISTANCE.</span>"
         subtitle="12 December 2026 · Coco Beach, Dar es Salaam · Instant Registration via WhatsApp +255 613 786 110."
-        img="https://images.unsplash.com/photo-1774050250283-2444f7d634d5?w=1600&h=900&fit=crop&auto=format"
-        imgAlt="Marathon runners"
+        img="/images/marathon_06.jpg"
+        imgAlt="Ocean City Marathon runners"
         cta={{ label: "REGISTER TO RUN", to: "/registration" }}
       />
 
