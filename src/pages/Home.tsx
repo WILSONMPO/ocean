@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router";
 import FadeUp from "../components/FadeUp";
-
-const simbuImg = "https://dailynews.co.tz/wp-content/uploads/2025/09/Simbu-2.jpg";
+import simbuImg from "./simbu.png";
 
 function useCountdown(target: Date) {
   const calc = () => {
@@ -114,12 +113,23 @@ function Hero() {
             <div className="relative mx-auto max-w-md lg:max-w-none">
               <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-300 via-sky-400 to-blue-500 opacity-80 blur-lg animate-pulse" />
               <div className="relative overflow-hidden rounded-2xl border-2 border-sky-200 bg-gradient-to-b from-sky-900 to-slate-900 shadow-2xl">
+                {/* Oceanic coastal backdrop */}
+                <div className="absolute inset-0">
+                  <img
+                    src="/images/marathon_22.jpg"
+                    alt="Ocean coastal backdrop"
+                    className="w-full h-full object-cover opacity-60 mix-blend-overlay"
+                    style={{ objectPosition: "center 35%" }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-sky-950 via-sky-950/40 to-cyan-900/40" />
+                </div>
+
                 <img
                   src={simbuImg}
                   alt="Alphonce Simbu — Tanzanian Elite Athlete"
-                  className="w-full h-[400px] lg:h-[480px] object-cover object-top hover:scale-105 transition-transform duration-700"
+                  className="relative z-10 w-full h-[400px] lg:h-[480px] object-cover object-top hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-sky-950 via-sky-950/30 to-transparent" />
+                <div className="absolute inset-0 z-10 bg-gradient-to-t from-sky-950 via-sky-950/30 to-transparent pointer-events-none" />
 
                 <div className="absolute top-4 right-4 bg-gradient-to-r from-sky-500 to-cyan-500 text-white px-4 py-1.5 text-[10px] font-wide tracking-[0.25em] uppercase font-bold shadow-lg rounded-full border border-white/30">
                   ELITE ATHLETE
