@@ -146,6 +146,10 @@ function Hero() {
                 </div>
               </div>
             </div>
+            {/* Caption below Simbu photo */}
+            <p className="mt-4 text-center font-body text-cyan-100 text-sm lg:text-base leading-relaxed bg-sky-900/60 backdrop-blur-sm px-4 py-3 rounded-xl border border-sky-400/20 shadow-md">
+              ALPHONCE SIMBU ndio bingwa wa kwanza wa Ocean City Community Marathon 2021 na alishinda GARI aina ya TOYOTA SIENTA
+            </p>
           </div>
         </div>
       </div>
