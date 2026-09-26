@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router";
 import FadeUp from "../components/FadeUp";
-import simbuImg from "./simbu.png";
+import simbuImg from "./simbu.jpg";
 
 function useCountdown(target: Date) {
   const calc = () => {
