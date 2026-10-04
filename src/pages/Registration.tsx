@@ -280,8 +280,8 @@ export default function Registration() {
         section="Registration"
         title="REGISTER<br /><span className='text-cyan-300'>TO RUN.</span>"
         subtitle="12 December 2026 · Coco Beach, Dar es Salaam · Instant Registration via WhatsApp +255 613 786 110."
-        img="/images/marathon_19.jpg"
-        imgAlt="Ocean City Marathon runners and start line"
+        img="/images/tanzanite.jpg"
+        imgAlt="Tanzanite Bridge coastal route - Ocean City Marathon"
       />
 
       {/* Direct WhatsApp Instant Action Banner */}

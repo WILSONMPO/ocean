@@ -1,13 +1,86 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <rect width="64" height="64" rx="16" fill="url(#bg)" />
-  <path d="M12 44C20 38 28 48 36 42C44 36 52 46 56 42" stroke="#38BDF8" stroke-width="4" stroke-linecap="round" fill="none" />
-  <path d="M10 50C18 44 26 54 34 48C42 42 50 52 54 48" stroke="#0284C7" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.7" />
-  <circle cx="36" cy="18" r="4.5" fill="#38BDF8" />
-  <path d="M30 38L33 29L38 31L43 38M33 29L38 24L44 26" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
   <defs>
+    <!-- Sky / Ocean Dark Background -->
     <linearGradient id="bg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#082F49" />
+      <stop stop-color="#04182B" />
+      <stop offset="0.55" stop-color="#073B61" />
       <stop offset="1" stop-color="#0284C7" />
     </linearGradient>
+
+    <!-- Mirage ethereal shimmer glow on tall tower -->
+    <linearGradient id="mirageTower" x1="32" y1="6" x2="32" y2="52" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#E0F2FE" />
+      <stop offset="25%" stop-color="#7DD3FC" stop-opacity="0.95" />
+      <stop offset="70%" stop-color="#38BDF8" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#0284C7" stop-opacity="0.3" />
+    </linearGradient>
+
+    <!-- Glowing facade facet -->
+    <linearGradient id="facetShine" x1="28" y1="8" x2="36" y2="52" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9" />
+      <stop offset="45%" stop-color="#BAE6FD" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#0284C7" stop-opacity="0.1" />
+    </linearGradient>
+
+    <!-- Spire Aura & Halo -->
+    <radialGradient id="spireAura" cx="32" cy="7" r="10" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#0284C7" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#0284C7" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Coastal Mirage Water Wave Glow -->
+    <linearGradient id="waveGlow" x1="8" y1="52" x2="56" y2="52" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0EA5E9" stop-opacity="0.2" />
+      <stop offset="50%" stop-color="#38BDF8" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#22D3EE" stop-opacity="0.3" />
+    </linearGradient>
   </defs>
+
+  <!-- Container with smooth rounded corners -->
+  <rect width="64" height="64" rx="15" fill="url(#bg)" />
+
+  <!-- Ethereal Spire Beacon Halo -->
+  <circle cx="32" cy="7" r="9" fill="url(#spireAura)" />
+
+  <!-- Subtle mirage background skyscraper silhouettes -->
+  <!-- Left secondary tower -->
+  <path d="M16 32L19 28H23V52H16V32Z" fill="#38BDF8" fill-opacity="0.2" />
+  <!-- Right secondary tower -->
+  <path d="M41 24L44 21H48V52H41V24Z" fill="#38BDF8" fill-opacity="0.25" />
+
+  <!-- Tall Building Needle / Spire -->
+  <line x1="32" y1="5" x2="32" y2="13" stroke="#F0F9FF" stroke-width="2" stroke-linecap="round" />
+  <circle cx="32" cy="5" r="1.5" fill="#FFFFFF" />
+
+  <!-- Main Tall Skyscraper (Mirage Architecture) -->
+  <!-- Crown / Top Pyramid Section -->
+  <polygon points="32,12 37,20 27,20" fill="#E0F2FE" />
+  
+  <!-- Middle Tier -->
+  <polygon points="27,20 37,20 39,34 25,34" fill="url(#mirageTower)" />
+
+  <!-- Lower Base Tier -->
+  <polygon points="25,34 39,34 41,52 23,52" fill="url(#mirageTower)" />
+
+  <!-- Architectural Glass Facet / Light Reflection running down center-left -->
+  <polygon points="32,12 32,52 26,52 28,34 29,20" fill="url(#facetShine)" />
+
+  <!-- Architectural Floor Lines / Glass Louvers shimmer -->
+  <line x1="28" y1="24" x2="36" y2="24" stroke="#FFFFFF" stroke-width="0.8" stroke-opacity="0.75" />
+  <line x1="27" y1="29" x2="37" y2="29" stroke="#E0F2FE" stroke-width="0.8" stroke-opacity="0.65" />
+  <line x1="26" y1="38" x2="38" y2="38" stroke="#E0F2FE" stroke-width="0.9" stroke-opacity="0.6" />
+  <line x1="25" y1="43" x2="39" y2="43" stroke="#BAE6FD" stroke-width="0.9" stroke-opacity="0.5" />
+  <line x1="24" y1="48" x2="40" y2="48" stroke="#7DD3FC" stroke-width="0.9" stroke-opacity="0.4" />
+
+  <!-- Coastal Ocean Mirage Reflections at the Foot (Rippling Horizon Waves) -->
+  <!-- Upper Water Mirage Wave -->
+  <path d="M10 52 C18 48, 25 54, 32 51 C39 48, 47 54, 54 50" stroke="url(#waveGlow)" stroke-width="2.5" stroke-linecap="round" />
+  <!-- Lower Water Wave -->
+  <path d="M12 57 C20 54, 27 59, 34 56 C42 53, 49 58, 52 56" stroke="#38BDF8" stroke-width="1.6" stroke-linecap="round" stroke-opacity="0.6" />
+
+  <!-- Mirage vertical reflection glimmer under water line -->
+  <line x1="32" y1="53" x2="32" y2="60" stroke="#7DD3FC" stroke-width="1.8" stroke-linecap="round" stroke-opacity="0.45" />
+  <line x1="29" y1="54" x2="29" y2="58" stroke="#38BDF8" stroke-width="1" stroke-linecap="round" stroke-opacity="0.35" />
+  <line x1="35" y1="54" x2="35" y2="58" stroke="#38BDF8" stroke-width="1" stroke-linecap="round" stroke-opacity="0.35" />
 </svg>

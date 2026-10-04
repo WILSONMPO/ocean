@@ -34,10 +34,10 @@ function Hero() {
       {/* Background ocean image preserved as requested */}
       <div className="absolute inset-0">
         <img
-          src="/images/marathon_22.jpg"
-          alt="Ocean City Marathon coastal scene"
+          src="/images/tanzanite.jpg"
+          alt="Tanzanite Bridge coastal landmark - Ocean City Marathon"
           className="w-full h-full object-cover opacity-50 mix-blend-overlay"
-          style={{ objectPosition: "center 38%" }}
+          style={{ objectPosition: "center 45%" }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-sky-950/90 via-sky-900/60 to-cyan-900/70" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-400/20 via-transparent to-transparent" />
@@ -116,10 +116,10 @@ function Hero() {
                 {/* Oceanic coastal backdrop */}
                 <div className="absolute inset-0">
                   <img
-                    src="/images/marathon_22.jpg"
-                    alt="Ocean coastal backdrop"
+                    src="/images/tanzanite.jpg"
+                    alt="Tanzanite Bridge coastal backdrop"
                     className="w-full h-full object-cover opacity-60 mix-blend-overlay"
-                    style={{ objectPosition: "center 35%" }}
+                    style={{ objectPosition: "center 45%" }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-sky-950 via-sky-950/40 to-cyan-900/40" />
                 </div>
@@ -619,7 +619,7 @@ function NewsPreview() {
 function Instagram() {
   const imgs = [
     { src: "/images/marathon_01.jpg", big: true },
-    { src: "/images/marathon_02.jpg", big: false },
+    { src: "/images/marathon_03.jpg", big: false },
     { src: "/images/marathon_15.jpg", big: false },
     { src: "/images/marathon_16.jpg", big: false },
     { src: "/images/marathon_17.jpg", big: false },
